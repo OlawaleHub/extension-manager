@@ -1,0 +1,219 @@
+/* ====== Base Styles ====== */
+:root {
+ --neutral-900: hsl(227, 75%, 14%);
+ --neutral-800: hsl(226, 25%, 17%);
+ --neutral-700: hsl(225, 23%, 24%);
+ --neutral-600: hsl(226, 11%, 37%);
+ --neutral-300: hsl(0, 0%, 78%);
+ --neutral-100: hsl(0, 0%, 93%);
+ --neutral-0: hsl(200, 60%, 99%);
+ --red-400: hsl(3, 86%, 64%);
+ --font-family: 'Noto Sans', sans-serif;
+}
+
+body {
+ font-family: Noto Sans, sans-serif;
+ font-size: 16px;
+ background-color: hsl(227, 75%, 14%);
+ min-height: 100vh;
+ color: hsl(226, 11%, 37%);
+ margin: 0;
+ padding: 1rem 150px;
+}
+
+/* ====== Header ====== */
+header {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin: 2rem 0 3rem 0;
+ background-color: hsl(226, 11%, 37%);
+ border-radius: 10px;
+ padding: 2px 1rem;
+}
+.main-button {
+ background-color: hsl(226, 11%, 37%);
+ border: 0.1px solid hsl(226, 11%, 37%);
+}
+
+header h1 {
+ font-weight: 700;
+ font-size: 1.5rem;
+}
+.grid-head {
+ display: flex;
+ justify-content: space-between;
+}
+
+/*  Filters  */
+
+.filter-group {
+ display: flex;
+ gap: 0.5rem;
+ margin-bottom: 2rem;
+}
+
+.filter-btn {
+ padding: 0.5rem 1rem;
+ border: none;
+ border-radius: 20px;
+ background-color: var(--neutral-100);
+ color: var(--neutral-900);
+ font-weight: 500;
+ cursor: pointer;
+ transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.filter-btn:hover {
+ background-color: var(--neutral-300);
+}
+
+.filter-btn.active {
+ background-color: var(--neutral-700);
+ color: white;
+}
+
+/* ====== Extension Cards ====== */
+.extension-card {
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ align-items: flex-start;
+ background-color: hsl(226, 25%, 17%);
+ border: 1px solid hsl(0, 0%, 78%);
+ border-radius: 8px;
+ padding: 1rem;
+ margin-bottom: 1rem;
+ transition: box-shadow 0.3s ease;
+}
+
+.extension-card:hover {
+ box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.extension-actions {
+ margin-top: 1rem;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ gap: 0.5rem;
+ justify-content: center;
+}
+
+.extension-icon {
+ width: 48px;
+ height: 48px;
+ margin-right: 1rem;
+}
+
+.extension-info {
+  flex-grow: 1; 
+ display: flex;
+ flex-direction: column;
+}
+
+.extension-name {
+ font-weight: 500;
+ margin: 0;
+ color: hsl(200, 60%, 99%);
+}
+
+.extension-description {
+ font-size: 0.9rem;
+ color: hsl(0, 0%, 78%);
+}
+.extension-list {
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+ gap: 1rem;
+}
+
+
+/* ====== Buttons ====== */
+/* Switch container */
+.switch {
+ position: relative;
+ display: inline-block;
+ width: 50px;
+ height: 24px;
+}
+
+.switch input {
+ opacity: 0;
+ width: 0;
+ height: 0;
+}
+
+/* Slider background */
+.slider {
+ position: absolute;
+ cursor: pointer;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background-color: hsl(0, 0%, 78%);
+ transition: 0.4s;
+ border-radius: 24px;
+}
+
+/* Slider knob */
+.slider::before {
+ position: absolute;
+ content: "";
+ height: 18px;
+ width: 18px;
+ left: 3px;
+ bottom: 3px;
+ background-color: white;
+ transition: 0.4s;
+ border-radius: 50%;
+}
+
+/* Checked state */
+.switch input:checked+.slider {
+ background-color: hsl(3, 86%, 64%);
+}
+
+.switch input:checked+.slider::before {
+ transform: translateX(26px);
+}
+
+.extension-actions button {
+ margin-left: 0.5rem;
+ padding: 0.5rem 1rem;
+ border: none;
+ border-radius: 4px;
+ cursor: pointer;
+ 
+}
+
+.toggle-btn {
+ background-color: hsl(225, 23%, 24%);
+ color: white;
+
+}
+
+.delete-btn {
+ background-color: hsl(3, 86%, 64%);
+ color: white;
+ 
+}
+
+/* ====== Responsive Layout ====== */
+@media (max-width: 600px) {
+ .extension-card {
+   flex-direction: column;
+   align-items: flex-start;
+ }
+
+ .extension-actions {
+   margin-top: 1rem;
+ }
+}
+
+
+
+
+ 
+ 

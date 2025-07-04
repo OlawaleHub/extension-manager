@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browser Extension Manager - Frontend Mentor Challenge</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Remix icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo1">
+          <img src="assets/images/logo.svg" alt="Extension logo" />
+        </div>
+        <button class="main-button">
+          <img src="assets/images/icon-sun.svg" alt="" />
+        </button>
+      </header>
+
+      <section>
+        <div class="grid-head">
+          <h1>Extension List</h1>
+
+          <div class="filter-group">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="active">Active</button>
+            <button class="filter-btn" data-filter="inactive">Inactive</button>
+          </div>
+        </div>
+      </section>
+
+      <main class="extension-list">
+        <article class="extension-card active">
+          <img
+            src="assets/images/logo-devlens.svg"
+            alt="Extension Icon"
+            class="extension-icon"
+          />
+
+          <div class="extension-info">
+            <h2 class="extension-name">DevLens</h2>
+            <p class="extension-description">
+              Quickly inspect page layouts and visualize element boundaries.
+            </p>
+          </div>
+          <div class="extension-actions">
+            <label class="switch">
+              <input type="checkbox" class="toggle-switch" />
+              <span class="slider"></span>
+            </label>
+            <br />
+            <br />
+            <button class="delete-btn">Remove</button>
+          </div>
+        </article>
+
+        <!-- StyleSpy -->
+        <article class="extension-card active">
+          <img
+            src="assets/images/logo-style-spy.svg"
+            alt="Extension Icon"
+            class="extension-icon"
+          />
+
+          <div class="extension-info">
+            <h2 class="extension-name">StyleSpy</h2>
+            <p class="extension-description">
+              Instantly analyze and copy CSS from any webpage element.
+            </p>
+          </div>
+          <div class="extension-actions">
+            <label class="switch">
+              <input type="checkbox" class="toggle-switch" />
+              <span class="slider"></span>
+            </label>
+            <br />
+            <br />
+            <button class="delete-btn">Remove</button>
+          </div>
+        </article>
+
+        <!-- SpeedBoost -->
+        <article class="extension-card active">
+          <img
+            src="assets/images/logo-speed-boost.svg"
+            alt="Extension Icon"
+            class="extension-icon"
+          />
+
+          <div class="extension-info">
+            <h2 class="extension-name">SpeedBoost</h2>
+            <p class="extension-description">
+              Optimizes browser resource usage to accelerate page loading.
+            </p>
+          </div>
+          <div class="extension-actions">
+            <label class="switch">
+              <input type="checkbox" class="toggle-switch" />
+              <span class="slider"></span>
+            </label>
+            <br />
+            <br />
+            <button class="delete-btn">Remove</button>
+          </div>
+        </article>
+        <!-- JSONWizard -->
+
+        <article class="extension-card active">
+          <img
+            src="assets/images/logo-json-wizard.svg"
+            alt="Extension Icon"
+            class="extension-icon"
+          />
+
+          <div class="extension-info">
+            <h2 class="extension-name">JSONWizard</h2>
+            <p class="extension-description">
+              Effortlessly manipulate and visualize JSON data structures.
+            </p>
+          </div>
+          <div class="extension-actions">
+            <label class="switch">
+              <input type="checkbox" class="toggle-switch" />
+              <span class="slider"></span>
+            </label>
+            <br />
+            <br />
+            <button class="delete-btn">Remove</button>
+          </div>
+        </article>
+
+        <!-- TabMaster Pro -->
+        <article class="extension-card active">
+          <img
+            src="assets/images/logo-tab-master-pro.svg"
+            alt="Extension Icon"
+            class="extension-icon"
+          />
+
+          <div class="extension-info">
+            <h2 class="extension-name">TabMaster Pro</h2>
+            <p class="extension-description">
+              Organizes browser tabs into groups and sessions.
+            </p>
+          </div>
+          <div class="extension-actions">
+            <label class="switch">
+              <input type="checkbox" class="toggle-switch" />
+              <span class="slider"></span>
+            </label>
+            <br />
+            <br />
+            <button class="delete-btn">Remove</button>
+          </div>
+        </article>
+
+        <!-- ViewportBuddy -->
+
+        <article class="extension-card active">
+          <img
+            src="assets/images/logo-viewport-buddy.svg"
+            alt="Extension Icon"
+            class="extension-icon"
+          />
+
+          <div class="extension-info">
+            <h2 class="extension-name">ViewportBuddy</h2>
+            <p class="extension-description">
+              Simulates various screen resolutions directly within the browser.
+            </p>
+          </div>
+          <div class="extension-actions">
+            <label class="switch">
+              <input type="checkbox" class="toggle-switch" />
+              <span class="slider"></span>
+            </label>
+            <br />
+            <br />
+            <button class="delete-btn">Remove</button>
+          </div>
+        </article>
+
+        <!-- Markup Notes -->
+
+        <article class="extension-card active">
+          <img
+            src="assets/images/logo-markup-notes.svg"
+            alt="Extension Icon"
+            class="extension-icon"
+          />
+
+          <div class="extension-info">
+            <h2 class="extension-name">Markup Notes</h2>
+            <p class="extension-description">
+              Enables annotation and notes directly onto webpages for
+              collaborative debugging.
+            </p>
+          </div>
+          <div class="extension-actions">
+            <label class="switch">
+              <input type="checkbox" class="toggle-switch" />
+              <span class="slider"></span>
+            </label>
+            <br />
+            <br />
+            <button class="delete-btn">Remove</button>
+          </div>
+        </article>
+
+        <!-- GridGuides -->
+        <article class="extension-card active">
+          <img
+            src="assets/images/logo-grid-guides.svg"
+            alt="Extension Icon"
+            class="extension-icon"
+          />
+
+          <div class="extension-info">
+            <h2 class="extension-name">GridGuides</h2>
+            <p class="extension-description">
+              Overlay customizable grids and alignment guides on any webpage.
+            </p>
+          </div>
+          <div class="extension-actions">
+            <label class="switch">
+              <input type="checkbox" class="toggle-switch" />
+              <span class="slider"></span>
+            </label>
+            <br />
+            <br />
+            <button class="delete-btn">Remove</button>
+          </div>
+        </article>
+        <!-- Palette Picker -->
+        <article class="extension-card active">
+          <img
+            src="assets/images/logo-palette-picker.svg"
+            alt="Extension Icon"
+            class="extension-icon"
+          />
+
+          <div class="extension-info">
+            <h2 class="extension-name">Palette Picker</h2>
+            <p class="extension-description">
+              Instantly extracts color palettes from any webpage.
+            </p>
+          </div>
+          <div class="extension-actions">
+            <label class="switch">
+              <input type="checkbox" class="toggle-switch" />
+              <span class="slider"></span>
+            </label>
+            <br />
+            <br />
+            <button class="delete-btn">Remove</button>
+          </div>
+        </article>
+
+        <!-- LinkChecker -->
+        <article class="extension-card active">
+          <img
+            src="assets/images/logo-link-checker.svg"
+            alt="Extension Icon"
+            class="extension-icon"
+          />
+
+          <div class="extension-info">
+            <h2 class="extension-name">LinkChecker</h2>
+            <p class="extension-description">
+              Scans and highlights broken links on any page.
+            </p>
+          </div>
+          <div class="extension-actions">
+            <label class="switch">
+              <input type="checkbox" class="toggle-switch" />
+              <span class="slider"></span>
+            </label>
+            <br />
+            <br />
+            <button class="delete-btn">Remove</button>
+          </div>
+        </article>
+        <!-- DOM Snapshot -->
+        <article class="extension-card active">
+          <img
+            src="assets/images/logo-dom-snapshot.svg"
+            alt="Extension Icon"
+            class="extension-icon"
+          />
+
+          <div class="extension-info">
+            <h2 class="extension-name">DOM Snapshot</h2>
+            <p class="extension-description">
+              Capture and export DOM structures quickly.
+            </p>
+          </div>
+          <div class="extension-actions">
+            <label class="switch">
+              <input type="checkbox" class="toggle-switch" />
+              <span class="slider"></span>
+            </label>
+            <br />
+            <br />
+            <button class="delete-btn">Remove</button>
+          </div>
+        </article>
+
+        <!-- ConsolePlus -->
+        <article class="extension-card active">
+          <img
+            src="assets/images/logo-console-plus.svg"
+            alt="Extension Icon"
+            class="extension-icon"
+          />
+
+          <div class="extension-info">
+            <h2 class="extension-name">ConsolePlus</h2>
+            <p class="extension-description">
+              Enhanced developer console with advanced filtering and logging.
+            </p>
+          </div>
+          <div class="extension-actions">
+            <label class="switch">
+              <input type="checkbox" class="toggle-switch" />
+              <span class="slider"></span>
+            </label>
+            <br />
+            <br />
+            <button class="delete-btn">Remove</button>
+          </div>
+        </article>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
